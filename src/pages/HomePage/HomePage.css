@@ -1,0 +1,9 @@
+.body,.warning{
+  background-color: #EEF2FE;
+}
+.notice{
+  background-color: #9B1FE9;
+}
+#title, .warning .icon{
+  color: #9B1FE9;
+}

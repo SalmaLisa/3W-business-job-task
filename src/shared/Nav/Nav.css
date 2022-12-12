@@ -1,0 +1,39 @@
+
+nav h3, .wallet-btn{
+  color: #9B1FE9;
+}
+.nav-select-options{
+  border-radius: 3px;
+}
+.nav-select-options img{
+height: 15px;
+width: 15px;
+}
+.options{
+  width: 250px;
+  right: 305px;
+  cursor: pointer;
+}
+.options ul li:hover{
+  background-color:#F5F7FD;
+
+}
+
+.wallet-btn{
+  border: 2px solid #9B1FE9;
+  border-radius: 3px;
+}
+.profile-bg{
+  background-color: #EEEEEE;
+  padding: 10px 8px 14px;
+}
+.profile-options{
+  right:55px;
+  width: 150px;
+}
+
+@media only screen and (max-width:576px){
+  .options{
+    right: 20px;
+  }
+}
