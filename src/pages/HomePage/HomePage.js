@@ -8,7 +8,7 @@ import RequestHistory from "../../components/RequestHistory/RequestHistory";
 const HomePage = () => {
   const { options } = useContext(OptionContext);
   return (
-    <div className="body pb-4">
+    <div style={{fontFamily:"'Varela', sans-serif"}} className="body pb-4">
       <div className="notice">
         <p className="text-white text-center py-4">Notice here</p>
       </div>

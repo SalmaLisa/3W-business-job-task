@@ -1,0 +1,26 @@
+.signup-form-container{
+  background-color: #EEF2FE;
+
+}
+.signup-form{
+    width: 500px;
+}
+.signup-form input{
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  
+}
+.signup-form input:focus{
+  outline: 0;
+  border-bottom: 1px solid #9B1FE9;
+}
+#signup-btn{
+  background-color: #9B1FE9;
+}
+.signup-form a{
+  color: #9B1FE9;
+  text-decoration: none;
+}
+.signup-form a:hover{
+  color: #9B1FE9;
+}

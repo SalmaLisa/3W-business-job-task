@@ -5,6 +5,11 @@
 .inputField{
   width: 50%;
 }
+.form-btn{
+  background-color: #9B1FE9;
+  font-size: 14px;
+  border-radius: 3px;
+}
 
 @media only screen and (max-width:576px){
   .inputField{

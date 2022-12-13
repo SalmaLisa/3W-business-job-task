@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./RecaptchaForm.css";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -34,9 +33,9 @@ const RecaptchaForm = () => {
           sitekey="6LeetnQjAAAAADx3BHg77BSJJ-8M1p3Q9lofcIPf"
           onChange={onChange}
         />
-        <Button variant="primary" type="submit" className="mt-3" disabled={!verified}>
-          Submit
-        </Button>
+        <button type="submit" className="form-btn mt-3 text-white px-3 py-1" disabled={!verified}>
+          Send Request
+        </button>
       </Form>
     </div>
   );

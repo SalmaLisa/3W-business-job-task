@@ -12,11 +12,15 @@ import { GoFileDirectory } from "react-icons/go";
 import { BiUserCircle } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { OptionContext } from "../../layouts/Main";
+import WalletModal from "../../components/WalletModal/WalletModal";
 
 const Nav = () => {
   const {options,setOptions} = useContext(OptionContext)
   const [displayOptions, setDisplayOptions] = useState(false);
   const [toggleProfile, setToggleProfile] = useState(false);
+  const [modalShow, setModalShow] = React.useState(false);
+
+  const handleModalShow = () => setModalShow(true);
 
   const handleOptions = (e) => {
     // console.log(e.target.innerHTML)
@@ -33,9 +37,9 @@ const Nav = () => {
   };
   return (
     <>
-      <nav className="px-4 py-3 d-flex justify-content-between position-relative">
+      <nav style={{fontFamily:"'Varela', sans-serif"}} className="px-4 py-3 d-flex justify-content-between position-relative">
         <div>
-          <h3>Faucets</h3>
+          <Link to='/' className="text-decoration-none"><h4 className="fw-bold">Faucets</h4></Link>
         </div>
         <div className="d-flex align-items-center">
           <div>
@@ -55,10 +59,10 @@ const Nav = () => {
               <BsChevronDown className="mt-1"></BsChevronDown>
             </div>
           </div>
-          <label className="wallet-btn d-flex align-items-center px-3 py-2 fw-bold mx-2">
+          <button onClick={handleModalShow} className="wallet-btn d-flex align-items-center px-3 py-2 fw-bold mx-2">
             <GoFileDirectory className=""></GoFileDirectory>
             <span className="ms-2  d-none d-md-block">Connect to Wallet</span>
-          </label>
+          </button>
           <div onClick={handleToggleProfile} role="button">
             <span className="profile-bg rounded-pill">
               <BiUserCircle className="fs-2 text-secondary "></BiUserCircle>
@@ -135,18 +139,21 @@ const Nav = () => {
       <div className="profile-options position-absolute">
         {toggleProfile && (
           <ul className="p-3 border bg-white">
-            <Link className="text-decoration-none">
+            <Link to="/login" className="text-decoration-none">
               <li className="text-secondary">Log In</li>
             </Link>
-            <Link className="text-decoration-none">
+            <Link to="/signUp"  className="text-decoration-none">
               <li className="text-secondary my-1">Sign Up</li>
             </Link>
-            <Link className="text-decoration-none">
+            <Link to='/faq' className="text-decoration-none">
               <l className="text-secondary">FAQ</l>
             </Link>
           </ul>
         )}
       </div>
+
+      {/* modal */}
+      <WalletModal modalShow={modalShow} setModalShow={setModalShow}></WalletModal>
     </>
   );
 };

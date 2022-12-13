@@ -1,0 +1,27 @@
+.title{
+  color: #9B1FE9;
+}
+.accordion{
+  width: 65%;
+}
+
+.accordion-button{
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  border-color: rgba(0,0,0,.125) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: white !important;
+  color: black !important;
+}
+
+@media screen and (max-width: 576px) {
+  .accordion{
+    width: 95%;
+  }
+}
