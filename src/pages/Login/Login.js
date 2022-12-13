@@ -54,7 +54,7 @@ const Login = () => {
         />
         <div className="text-center my-3">
           <small className="fw-bold">
-            Don't have an account? <Link to="/signUp">Sign Up</Link>
+            Don't have an account? <Link to="/signUp">Login</Link>
           </small>
         </div>
         <p className="fw-bold fs-4 text-center">or</p>
