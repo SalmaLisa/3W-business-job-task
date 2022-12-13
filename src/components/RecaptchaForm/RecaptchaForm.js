@@ -33,7 +33,7 @@ const RecaptchaForm = () => {
           sitekey="6LeetnQjAAAAADx3BHg77BSJJ-8M1p3Q9lofcIPf"
           onChange={onChange}
         />
-        <button type="submit" className="form-btn mt-3 text-white px-3 py-1" disabled={!verified}>
+        <button type="submit" className="form-btn mt-3 text-white px-3 py-1 border-0" disabled={!verified}>
           Send Request
         </button>
       </Form>
