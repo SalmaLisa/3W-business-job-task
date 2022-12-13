@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import { BsGoogle } from "react-icons/bs";
+import GoogleSignIn from "../../shared/GoogleSignIn/GoogleSignIn";
 
 const Login = () => {
   
@@ -23,10 +24,11 @@ const Login = () => {
       <small className="fw-bold">Don't have an account? <Link>Sign Up</Link></small>
       </div>
       <p className="fw-bold fs-4 text-center">or</p>
-      <div className="text-center fs-2">
+      {/* <div className="text-center fs-2">
         <BsGoogle id="loginBtn"></BsGoogle>
         
-</div>
+</div> */}
+        <GoogleSignIn></GoogleSignIn>
     </form>
   </div>
   );
