@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SignUp.css";
 import GoogleSignIn from "../../shared/GoogleSignIn/GoogleSignIn";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 const SignUp = () => {
+  const [inputType, setInputType] = useState("");
+  const [isPassword, setIsPassword] = useState(true);
+  const handlePasswordType = () => {
+    setIsPassword(!isPassword);
+    if (isPassword) {
+      setInputType("password");
+    } else {
+      setInputType("text");
+    }
+  };
   return (
     <div
       style={{ fontFamily: "'Varela', sans-serif" }}
-      className="signup-form-container d-flex justify-content-center align-items-center"
+      className="authentication-form-container d-flex justify-content-center align-items-center"
     >
-      <form className="signup-form bg-white py-5 px-4 my-5">
+      <form className="authentication-form bg-white py-5 px-4 my-5">
         <h2 className="text-center mb-4">Sign Up</h2>
         <fieldset>
           <label htmlFor="" className="d-block fw-bold">
@@ -17,7 +28,7 @@ const SignUp = () => {
           </label>
           <input
             type="text"
-            className="w-100 pb-2 mt-1 "
+            className="w-100 pb-2 mt-1 border-0 "
             placeholder="Enter your email"
           />
         </fieldset>
@@ -25,21 +36,26 @@ const SignUp = () => {
           <label htmlFor="" className="d-block fw-bold">
             Password
           </label>
-          <input
-            type="text"
-            className="w-100 pb-2 mt-1 "
-            placeholder="Enter your password"
-          />
+          <div className="d-flex">
+            <input
+              type={inputType}
+              className="w-100 pb-2 mt-1 border-0 "
+              placeholder="Enter your password"
+            />
+            <span onClick={handlePasswordType} className="fs-5">
+              {isPassword ? <AiFillEye /> : <AiFillEyeInvisible />}
+            </span>
+          </div>
         </fieldset>
         <input
-          id="signup-btn"
+          id="authentication-btn"
           type="submit"
-          className="w-100 py-2 mt-5 text-white fw-bold"
+          className="w-100 py-2 mt-5 text-white fw-bold border-0"
           value="Sign Up"
         />
         <div className="text-center my-3">
           <small className="fw-bold">
-            Already have an account? <Link>Login</Link>
+            Already have an account? <Link to="/login">Login</Link>
           </small>
         </div>
         <p className="fw-bold fs-4 text-center">or</p>
