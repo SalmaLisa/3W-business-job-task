@@ -11,8 +11,10 @@ width: 15px;
 }
 .options{
   width: 250px;
-  right: 305px;
+  right: 285px;
   cursor: pointer;
+  z-index: 30;
+  box-shadow: 3px 3px 20px #00000040;
 }
 .options ul li:hover{
   background-color:#F5F7FD;
@@ -28,8 +30,10 @@ width: 15px;
   padding: 10px 8px 14px;
 }
 .profile-options{
-  right:55px;
+  right:35px;
   width: 150px;
+  z-index: 30;
+  box-shadow: 3px 3px 20px #00000040;
 }
 
 @media only screen and (max-width:576px){

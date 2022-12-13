@@ -70,9 +70,9 @@ const Nav = () => {
           </div>
         </div>
       </nav>
-      <div className="options position-absolute ">
+      <div className="options position-absolute bg-white ">
         {displayOptions && (
-          <ul className="border py-2 px-0 bg-white">
+          <ul className="py-2 px-0">
             <li
               onClick={handleOptions}
               className="nav-select-options d-flex align-items-center py-2 px-3"
@@ -136,9 +136,9 @@ const Nav = () => {
           </ul>
         )}
       </div>
-      <div className="profile-options position-absolute">
+      <div className="profile-options position-absolute bg-white">
         {toggleProfile && (
-          <ul className="p-3 border bg-white">
+          <ul className="p-3">
             <Link to="/login" className="text-decoration-none">
               <li className="text-secondary">Log In</li>
             </Link>
